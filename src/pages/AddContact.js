@@ -1,19 +1,39 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const AddContact = () => {
-  return (
+const AddContact = (props) => {
+    const { handleAddContact,} = props
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+
+    const add = (e)=>{
+        e.preventDefault();
+        if (name === "" || email ===""){
+            alert("All field is mandatory")
+            return;
+        } 
+    
+        handleAddContact({name,email})
+        setEmail("")
+        setName("")
+        
+        
+    }
+
+
+  return (   
     <div className='ui main'>
         <h2>Add Contact</h2>
-        <form className='ui form'>
+        <form onSubmit={add} className='ui form'> 
             <div className='field'>
                 <label> Name</label>
-                <input type ="text" placeholder='Name :'></input>
+                <input type ="text"  value ={email }placeholder='Name :' onChange={ (e)=> setEmail (e.target.value)} required></input>
             </div>
             <div className='field'>
                 <label> Email</label>
-                <input type ="email" placeholder='Email:'></input> 
+                <input type ="email"  value ={name} placeholder='Email:' onChange ={(e)=> setName(e.target.value)} required></input> 
             </div>
-            <button className='ui button blue'>
+            <button type='submit' className='ui button blue'>
                 Submit
             </button>
            
