@@ -11,7 +11,7 @@ const AddContact = () => {
             </div>
             <div className='field'>
                 <label> Email</label>
-                <input type ="email" placeholder='Email:'></input>
+                <input type ="email" placeholder='Email:'></input> 
             </div>
             <button className='ui button blue'>
                 Submit
