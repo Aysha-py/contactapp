@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 const AddContact = (props) => {
-    const { handleAddContact,} = props
+    const { handleAddContact} = props
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");

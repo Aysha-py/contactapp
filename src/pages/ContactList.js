@@ -2,21 +2,17 @@ import React from 'react'
 import Contact from '../pages/Contact'
 
 const ContactList =(props)=> {
-  const renderContactList = props.contacts.map((contact)=>{
-
-    return <Contact contact = {contact} ></Contact>
+  const { contacts } = props 
     
-
-  });
-
-    
+  return( 
+    <div className="ui inverted segment">
+      {contacts.map((contact, index) =>
       
-    
-    return( 
-      <div className="ui inverted segment">
-        {renderContactList}
-      </div>
-    )
+          <Contact key={index} contact={contact} />
+        
+      )}
+    </div>
+  )
 }
 
 export default ContactList

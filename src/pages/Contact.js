@@ -3,15 +3,16 @@ import React from 'react'
 
 
 const Contact=(props)=> {
-    const { Name,email } = props.contact;
+    const { name, email } = props.contact;
+
   return (
     <div style={{display: "flex", justifyContent:"space-between"}}>
         <div className='item'>
             <div className = "header" style={{display:"flex"}}>
-                <i class="user icon" style={{margin:"20px", display:"flex"}}></i>
-                <div className = "content">
-                    <div className = "header">
-                        {Name}
+                <i class="user icon" style={{margin:"20px"}}></i>
+                <div className = "content" style={{display:"flex"}}>
+                    <div className = "name" >
+                        {name}
                     </div>
                     <div className = "mail">
                         {email}
