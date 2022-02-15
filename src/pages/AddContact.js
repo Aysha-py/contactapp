@@ -11,6 +11,7 @@ const AddContact = (props) => {
         if (name === "" || email ===""){
             alert("All field is mandatory")
             return;
+            
         } 
     
         handleAddContact({name,email})
@@ -22,12 +23,12 @@ const AddContact = (props) => {
 
 
   return (   
-    <div className='ui main'>
+    <div className='ui'>
         <h2>Add Contact</h2>
-        <form onSubmit={add} className='ui form'> 
+        <form onSubmit={add} className='ui form' > 
             <div className='field'>
                 <label> Name</label>
-                <input type ="text"  value ={email }placeholder='Name :' onChange={ (e)=> setEmail (e.target.value)} required></input>
+                <input type ="text"  value ={email}placeholder='Name :' onChange={ (e)=> setEmail (e.target.value)} required></input>
             </div>
             <div className='field'>
                 <label> Email</label>

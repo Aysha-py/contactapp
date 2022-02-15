@@ -7,18 +7,18 @@ import ContactList from './pages/ContactList';
 
 function App() {
 
-  const [contact, setContact] =useState([])
+  const [cont, setContact] =useState([])
 
   const handleAddContact = (contact) => {
     console.log(contact)
-    setContact([contact, contact])
-  
+    setContact([...cont, contact])
+
   }
   return (
     <div className="ui container">
       <Header />
       <AddContact handleAddContact={handleAddContact}  />
-      <ContactList contacts={contact} />
+      <ContactList contacts= {cont} />
     </div>
   );
 }
