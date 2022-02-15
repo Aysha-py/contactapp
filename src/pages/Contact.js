@@ -4,6 +4,7 @@ import React from 'react'
 
 const Contact=(props)=> {
     const { name, email } = props.contact;
+   
 
   return (
     <div style={{display: "flex", justifyContent:"space-between"}}>
